@@ -5,8 +5,8 @@ import RenderTasks from './components/RenderTasks';
 
 const initialTasks = [
   { id: 1, text: 'Go shopping', completed: false },
-  { id: 2, text: 'Work out', completed: false },
-  { id: 3, text: 'See the doctor', completed: true }
+  { id: 2, text: 'Work out', completed: true },
+  { id: 3, text: 'Get a life', completed: false }
 ]
 
 let id = initialTasks.length
@@ -25,7 +25,6 @@ function App() {
       completed: false
     }
     const newTasks = [...tasks, newTask]
-    // tell react to update state & rerender
     setTasks(newTasks)
   }
 
