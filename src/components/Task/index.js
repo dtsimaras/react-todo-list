@@ -1,8 +1,8 @@
 import React from 'react'
 import './task.css'
 import deleteIcon from 'assets/icons/icons8-delete.svg'
-import editIcon from 'assets/icons/icons8-edit.svg'
-function Task({ task, updateTasks, deleteTask, editTask }) {
+
+function Task({ task, updateTasks, deleteTask}) {
 
     const handleChange = (event) => {
         updateTasks(task.id, event.target.checked)
@@ -10,10 +10,6 @@ function Task({ task, updateTasks, deleteTask, editTask }) {
 
     const handleDelete = () => {
         deleteTask(task.id)
-    }
-
-    const handleEdit = () => {
-        editTask(task.id)
     }
 
     return (
@@ -28,13 +24,7 @@ function Task({ task, updateTasks, deleteTask, editTask }) {
                     checked={task.completed}
                 />
             </div>
-            <div id="actions">
-
-                <img
-                    src={editIcon}
-                    alt='edit icon'
-                    onClick={handleEdit}
-                />
+            <div>
                 <img
                     src={deleteIcon}
                     alt='delete icon'

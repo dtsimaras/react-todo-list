@@ -44,17 +44,6 @@ function App() {
     setTasks(filteredTasks)
   }
 
-  const editTask = () => { }
-  // TODO: Implement
-  const endEditTask = (taskId, text) => {
-
-    //When edit is done
-    const filteredTasks = tasks.filter(task => task.id !== taskId)
-    const editedTask = tasks.filter(task => task.id === taskId)
-    editedTask.text = text
-    setTasks([...filteredTasks, editedTask])
-  }
-
   const handleShowCompleted = (event) => {
     const checked = event.target.checked
     const completed = document.getElementById('completed-list')
@@ -89,7 +78,6 @@ function App() {
           tasks={tasks}
           updateTasks={updateTasks}
           deleteTask={deleteTask}
-          editTask={editTask}
           completedSection={false}
         />
       </div>
@@ -101,7 +89,6 @@ function App() {
           tasks={tasks}
           updateTasks={updateTasks}
           deleteTask={deleteTask}
-          editTask={editTask}
           completedSection={true}
         />
       </div>

@@ -65,3 +65,7 @@
   height: 1.3rem;
   margin-right: 10px;
 }
+
+.App #completed-list {
+  display: none;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import Task from '../Task'
 
-function RenderTasks({ tasks, updateTasks, deleteTask, editTask, completedSection }) {
+function RenderTasks({ tasks, updateTasks, deleteTask, completedSection }) {
     return (
         <div>
             {
@@ -14,7 +14,6 @@ function RenderTasks({ tasks, updateTasks, deleteTask, editTask, completedSectio
                                 key={task.id}
                                 updateTasks={updateTasks}
                                 deleteTask={deleteTask}
-                                editTask={editTask}
                             />
                         )
                     }
