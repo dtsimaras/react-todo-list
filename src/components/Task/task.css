@@ -1,0 +1,24 @@
+span {
+    margin: 5px;
+}
+
+img {
+  height: 15px;
+}
+
+.task input:hover,
+.task img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.task input:active,
+.task img:active {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+}
